@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: rgb(235, 235, 236);
+  --bg-secondary: rgb(218, 224, 230);
+
+  --txt-primary: #004472;
+  --txt-secondary: rgb(107, 100, 100);
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  padding-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.card-h3 {
+  text-align: center;
+  color: var(--txt-secondary);
+  padding-bottom: 2rem;
+}
+
+.card-h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: start;
+  grid-gap: 4rem;
+  justify-content: space-around;
+  padding: 0 6rem;
+}
+
+.grid-card {
+  border: none;
+  height: 35rem;
+  width: 22rem;
+  background: var(--bg-primary);
+  border-radius: 0.5rem;
+}
+
+.grid-card p {
+  font-size: 1.1rem;
+}
+
+.card-h2-child {
+  padding: 0 3rem;
+  padding-bottom: 1rem;
+}
+
+.card-h2-child a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-h2-child a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  border: 1px solid #fff;
+  border-radius: 5em;
+  padding: 1.2rem;
+}
+
+.btn:hover {
+  border: 3px solid #fff;
+}
+
+.btn:active a {
+  font-size: 1.2rem;
+}
+
+.showcase-card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.showcase-grid-card-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.showcase-grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.showcase-card-h2-child {
+  padding-right: 5rem;
+}
+
+.showcase-card-p-child {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 5rem;
+}
+
+.showcase-grid-card .btn {
+  text-decoration: none;
+  color: black;
+  border: #000 1px solid;
+}
+
+.showcase-grid-card .btn:hover {
+  border: #000 2px solid;
+}
+
+/*Navbar*/
+#navbar {
+  background: var(--bg-primary);
+}
+
+#navbar .menu {
+  display: flex;
+  padding-top: 1rem;
+  height: 11vh;
+}
+
+#navbar .menu .logo {
+  display: inline-block;
+}
+
+#navbar .menu .logo img {
+  width: 180px;
+}
+
+#navbar .menu ul {
+  padding-left: 15rem;
+  padding-top: 1.5rem;
+  display: inline-block;
+}
+
+#navbar .menu ul li:hover {
+  color: var(--txt-primary);
+}
+
+#navbar .menu ul li {
+  display: inline-block;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  padding-left: 28px;
+  transition: 0.2s ease-in-out;
+}
+
+#navbar .no-dropdown a {
+  text-decoration: none;
+  color: #000;
+}
+
+#navbar .no-dropdown a:hover {
+  color: var(--txt-primary);
+}
+
+#navbar .menu .nested {
+  display: none;
+}
+
+.nested li {
+  display: block !important;
+}
+
+#navbar .menu ul li:hover .nested {
+  display: block;
+  position: absolute;
+  width: 25rem;
+  left: 0rem;
+  padding-left: 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.2rem;
+  background-color: var(--bg-primary);
+  border-radius: 0.3rem;
+  border: none;
+  z-index: 1000;
+}
+
+#navbar .menu .nested li {
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+
+  padding-right: 0;
+  transition: 0.2s ease-in-out;
+}
+
+#navbar .menu .nested li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#navbar .menu .nested li:hover {
+  background: var(--bg-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding-top: 1.2rem;
+}
+
+#navbar .menu .nested i {
+  text-align: end;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.5rem;
+}
+
+.About .nested {
+  width: 12.5rem !important;
+}
+
+.About .nested li {
+  padding-left: 1.25rem !important;
+}
+
+.Program .nested {
+  width: 18.75rem !important;
+}
+
+.Program .nested li {
+  padding-left: 1.87rem !important;
+}
+
+.Presidential .nested {
+  width: 25rem !important;
+}
+
+.Presidential .nested li {
+  padding-left: 1.87rem !important;
+}
+
+/*Header*/
+#header {
+  background: url("Images/Header.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+
+#header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.74);
+  position: absolute;
+}
+
+#header * {
+  z-index: 10;
+  color: white;
+  position: relative;
+}
+
+#header img {
+  filter: invert(97%) sepia(9%) saturate(2319%) hue-rotate(330deg)
+    brightness(99%) contrast(113%);
+  width: 60vh;
+  padding-bottom: 3rem;
+}
+
+#header .header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80%);
+  position: relative;
+}
+
+#header .header-text-container h1 {
+  font-size: 2.5rem;
+}
+
+#header .header-text-container a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#header .header-text-container .btn {
+  position: absolute;
+  margin-top: 25rem;
+}
+
+#header .header-text-container .btn:active a {
+  font-size: 1.2rem;
+}
+
+/*Gift*/
+#gift {
+  background: var(--bg-secondary);
+  height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/*News*/
+#news {
+  height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#news .card-h3 {
+  color: #000;
+}
+
+#news .grid-card {
+  background-color: var(--bg-secondary);
+}
+
+/*Presidential*/
+#presidential {
+  background: var(--bg-primary);
+  height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+}
+
+/*construction*/
+#construction {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/*leadership*/
+#leadership {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#leadership .card-h3 {
+  color: #000;
+}
+
+/*African*/
+#African {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/*youth*/
+#youth {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#youth .showcase-card {
+  grid-template-columns: 1.2fr 0.8fr !important;
+}
+
+#youth .showcase-grid-card {
+  padding-left: 5rem;
+}
+
+#youth .card-h3 {
+  color: #000;
+}
+
+/*Youth ext*/
+#youth-ext {
+  padding-bottom: 4rem;
+}
+
+#youth-ext .card {
+  grid-template-columns: 1fr 1fr;
+}
+
+#youth-ext .grid-card {
+  width: 40rem;
+  height: 32rem;
+}
+
+#defend {
+  border-bottom: 1px solid #000;
+  background: var(--bg-secondary);
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+/*Footer logo*/
+
+#footer {
+  padding-top: 1rem;
+}
+
+#footer .card-h3 {
+  text-align: start;
+  color: #000;
+  padding-bottom: 2.5rem;
+}
+
+#footer .logos-grid {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#footer .logos-grid img {
+  width: 200px;
+}
+
+#footer .logos-grid-1,
+#footer .logos-grid-2 {
+  padding-right: 3rem;
+}
+
+#footer .Hyperlinks-grid {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#footer .Hyperlinks-grid-1,
+#footer .Hyperlinks-grid-2,
+#footer .Hyperlinks-grid-3 {
+  padding-right: 5rem;
+}
+
+#footer .Hyperlinks-grid ul {
+  list-style: none;
+}
+
+#footer .Hyperlinks-grid ul li {
+  padding-bottom: 1.6rem;
+  font-size: 1.1rem;
+}
+
+#footer .Hyperlinks-grid ul li a {
+  color: #135581;
+}
+
+#footer .Hyperlinks-grid ul li a:hover {
+  color: #000;
+}
+
+#footer form {
+  display: flex;
+  gap: 3rem;
+}
+
+#footer form label {
+  display: block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+#footer form .card-h3 {
+  padding-bottom: 1rem !important;
+}
+#footer form input {
+  padding-top: 0rem;
+  height: 2.4rem;
+  width: 18rem;
+  border-radius: 2rem;
+  border: 1px solid #000;
+  background: var(--bg-primary);
+}
+
+#footer .Aggreement-Check {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+#footer .Aggreement-Check input {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+#footer .Aggreement-Check input:checked {
+  accent-color: #000;
+}
+
+#footer .Terms {
+  padding-bottom: 1.5rem;
+}
+
+#footer .Terms a {
+  color: #135581;
+  font-size: 1.1rem;
+}
+
+#footer .btn-Sign {
+  border: 1px solid #000;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+#footer .btn-Sign:hover {
+  border: 4px solid #000;
+}
+
+#footer .sign {
+  padding-bottom: 3rem;
+}
+
+#follow {
+  padding-bottom: 0.8rem !important;
+}
+
+#footer .social-icons {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+#footer .social-icons i {
+  color: #000;
+  transition: 0.2s ease-in-out;
+}
+
+#footer .social-icons i:hover {
+  font-size: 2rem;
+}
+
+#footer .privacy {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+#footer .privacy a {
+  color: #135581;
+}
+
+#footer .footer-end {
+  font-size: 0.9rem;
+  padding-bottom: 5rem;
+
+  font-weight: 400;
+}
+
+#footer .footer-end a {
+  color: #135581;
+}
+
+#footer .footer-end p {
+  padding-bottom: 0.5rem;
+}
+
+#footer .footer-end p:nth-child(2) {
+  text-align: center;
+}
